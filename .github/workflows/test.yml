@@ -2,13 +2,15 @@ name: CI
 on:
   push:
   schedule:
-    - cron: "*/5 * * * *" # every day at midnight
+    - cron: "*/1 * * * *" # every 1 minutes
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
         uses: actions/checkout@v4
+      - name: show timestamp
+        run: echo "Workflow started at $(date)"
       - name: running single line command
         run: sleep 5
       - name: running multiple lines
