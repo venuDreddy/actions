@@ -7,7 +7,7 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v4
       - name: running single line command
-        run: echo "Hello world"
+        run: sleep 5
       - name: running multiple lines
         run: |
           echo ok
