@@ -11,16 +11,21 @@ jobs:
     name: Build API
     runs-on: ubuntu-latest
     steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+
       - name: install dependencies
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: "8.x"
 
-      - name: checkout repo
-        uses: actions/checkout@v4
-
       - name: show timestamp
         run: echo "Workflow started at $(date)"
 
+      - name: restore packages
+        run: dotnet restore
+        working-directory: api
+
       - name: build
         run: dotnet build
+        working-directory: api
