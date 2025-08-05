@@ -1,0 +1,14 @@
+name: CI
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+      - name: running single line command
+        run: echo "Hello world"
+      - name: running multiple lines
+        run: |
+          echo ok
+          echo fine
