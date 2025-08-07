@@ -25,5 +25,6 @@ jobs:
       - name: running go
         working-directory: upper
         run: |
+          chmod +x ./upper
           ./upper actions are amazing!
           
