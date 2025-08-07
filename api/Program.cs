@@ -13,10 +13,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-
-
-
-
 var newSummaries = new[]
 {
     "Brrrrr", "Yikes", "Frozen", "Hot", "Ouch", "StopIt"
