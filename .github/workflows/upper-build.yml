@@ -19,6 +19,7 @@ jobs:
 
       - name: build go
         working-directory: upper
-        run: go build
-      - run: go run ./upper actions are amazing!
-      - run: echo finished!
+        run: |
+          go build
+          go run ./upper actions are amazing!
+          echo finished!
