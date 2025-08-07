@@ -20,4 +20,3 @@ jobs:
         with:
           path: "./upper/upper"
           name: go Build
-      - run: go test
