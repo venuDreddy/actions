@@ -1,0 +1,19 @@
+name: Artifacts
+on:
+  push:
+
+defaults:
+  run:
+    working-directory: upper
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '22.4'
+      - run: ls
+      - run: go build
+      - run: ls
+      - run: go test -v
