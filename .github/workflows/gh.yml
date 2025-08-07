@@ -1,0 +1,14 @@
+name: gitub secrets and environment
+on:
+  push:
+    paths: ".github/workflows/gh.yml"
+
+jobs:
+  env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: running git commands
+        run: |
+          env
+          gh --version
+          gh workflow list
