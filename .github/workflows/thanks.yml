@@ -1,0 +1,15 @@
+name: Writing to github API
+on:
+  push:
+    paths: ".github/workflows/thanks.yml"
+jobs:
+  write:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        id: script
+        with:
+          script: |
+            return "Hello world"
+      - name: printing script results
+        run: echo ${{steps.script.outputs.result}}
