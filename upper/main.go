@@ -16,6 +16,7 @@ func main() {
 	//    ./upper  # \n
 
 	// stat STDIN
+	fmt.Println("Amazing!")
 	stat, err := os.Stdin.Stat()
 	if err != nil {
 		fmt.Printf("Error stat'ing STDIN %v\n", err)
