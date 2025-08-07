@@ -9,6 +9,6 @@ jobs:
     steps:
       - name: running git commands
         run: |
-          env
+          echo $GH_TOKEN
           gh --version
           gh workflow list
