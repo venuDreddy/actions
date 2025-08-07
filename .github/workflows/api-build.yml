@@ -25,7 +25,6 @@ jobs:
       - name: restore packages
         run: dotnet restore
         working-directory: api
-
-      - name: build
-        run: dotnet build
+        
+      - run: dotnet build
         working-directory: api
