@@ -6,6 +6,8 @@ on:
 jobs:
   env:
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
     steps:
       - name: running git commands
         run: |
