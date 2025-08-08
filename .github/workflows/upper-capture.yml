@@ -24,3 +24,4 @@ jobs:
         with:
           path: "./upper/upper*"
           name: "Build ${{matrix.os}}"
+      - run: go test
