@@ -18,3 +18,8 @@ jobs:
     steps:
       - name: running echo
         run: echo "${{github.event.inputs.greetings}}"
+      - name: simulating deployment
+        run: |
+          echo "deploying..."
+          echo "deployed."
+        if: ${{github.event.inputs.deploy}}==true
