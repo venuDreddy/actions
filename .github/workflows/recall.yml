@@ -1,8 +1,16 @@
 name: recalling concepts
-on: ["push","workflow_dispatch"]
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      greetings:
+        required: true
+        description: "Message to greet"
+        default: "Hi there Vincent!"
+        
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - name: running echo
-        run: echo "Running a command"
+        run: echo ${{github.events.inputs.greetings}}
