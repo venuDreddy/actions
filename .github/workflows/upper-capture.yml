@@ -1,6 +1,6 @@
 name: Artifacts
 on:
-  push:
+  fork:
 
 defaults:
   run:
