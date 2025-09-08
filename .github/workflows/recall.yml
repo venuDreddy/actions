@@ -7,6 +7,10 @@ on:
         required: true
         description: "Message to greet"
         default: "Hi there Vincent!"
+      deploy:
+        required: true
+        description: "whether to deploy or not"
+        default: true
         
 jobs:
   test:
